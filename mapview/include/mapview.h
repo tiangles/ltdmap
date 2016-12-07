@@ -26,6 +26,7 @@ public:
     virtual void addGeoGraphic(std::vector<GeoGraphic> geo) = 0;
     virtual const Projection& getProjection() const = 0;
     virtual void* getNativeWindow() = 0;
-    virtual std::shared_ptr<Marker> createMarker() = 0;
+    virtual std::shared_ptr<Marker> createMarker(const std::string& iconURI,
+                                                 const std::string& title) = 0;
 };
 }

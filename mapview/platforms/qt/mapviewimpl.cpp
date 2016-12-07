@@ -88,9 +88,10 @@ void *MapViewImpl::getNativeWindow()
     return m_mapWidget;
 }
 
-std::shared_ptr<Marker> MapViewImpl::createMarker()
+std::shared_ptr<Marker> MapViewImpl::createMarker(const std::string& iconURI,
+                                                  const std::string& title)
 {
-    return std::make_shared<MarkerImpl>(m_mapWidget->getMap());
+    return std::make_shared<MarkerImpl>(m_mapWidget->getMap(), iconURI, title);
 }
 
 //void MapViewImpl::enableLayer(std::string /*layerName*/)

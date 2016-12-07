@@ -6,6 +6,7 @@ class MapWidget;
 }
 namespace ltd_mapview{
 class Marker;
+class MarkerParameter;
 
 class MapViewImpl: public MapView
 {
@@ -23,7 +24,8 @@ private:
 //    void disableLayer(std::string layerName) override;
 //    void enableGesture() override;
 //    void disableGesture() override;
-    std::shared_ptr<Marker> createMarker() override;
+    std::shared_ptr<Marker> createMarker(const std::string& iconURI,
+                                         const std::string& title) override;
 
 private:
     Tangram::MapWidget* m_mapWidget;
