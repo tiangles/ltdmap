@@ -2,6 +2,7 @@
 #include "camera.h"
 #include "mapwidget.h"
 #include "tangram.h"
+#include "markerimpl.h"
 
 using namespace ltd_mapview;
 
@@ -87,22 +88,27 @@ void *MapViewImpl::getNativeWindow()
     return m_mapWidget;
 }
 
-void MapViewImpl::enableLayer(std::string /*layerName*/)
+std::shared_ptr<Marker> MapViewImpl::createMarker()
 {
-
+    return std::make_shared<MarkerImpl>(m_mapWidget->getMap());
 }
 
-void MapViewImpl::disableLayer(std::string /*layerName*/)
-{
+//void MapViewImpl::enableLayer(std::string /*layerName*/)
+//{
 
-}
+//}
 
-void MapViewImpl::enableGesture()
-{
+//void MapViewImpl::disableLayer(std::string /*layerName*/)
+//{
 
-}
+//}
 
-void MapViewImpl::disableGesture()
-{
+//void MapViewImpl::enableGesture()
+//{
 
-}
+//}
+
+//void MapViewImpl::disableGesture()
+//{
+
+//}
