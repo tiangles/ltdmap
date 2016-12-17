@@ -21,10 +21,12 @@ HEADERS += ../../include/mapview.h \
     ../../platforms/qt/mapviewimpl.h \
     ../../include/ltdtypes.h \
     ../../include/marker.h \
-    ../../platforms/qt/markerimpl.h
+    ../../platforms/qt/markerimpl.h \
+    ../../platforms/qt/projectionimpl.h
 
 SOURCES += \
     ../../platforms/qt/mapviewimpl.cpp \
     ../../platforms/qt/main.cpp \
     ../../platforms/qt/camera.cpp \
-    ../../platforms/qt/markermpl.cpp
+    ../../platforms/qt/markermpl.cpp \
+    ../../platforms/qt/projectionimpl.cpp

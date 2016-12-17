@@ -3,6 +3,7 @@
 #include "mapwidget.h"
 #include "tangram.h"
 #include "markerimpl.h"
+#include "projectionimpl.h"
 
 using namespace ltd_mapview;
 
@@ -14,11 +15,13 @@ MapViewImpl::MapViewImpl()
 {
     m_mapWidget = new Tangram::MapWidget(NULL);
     m_mapWidget->initialize("scene.yaml");
+    m_projection = new ProjectionImpl(m_mapWidget->getMap());
 }
 
 MapViewImpl::~MapViewImpl()
 {
-
+    delete m_projection;
+    delete m_mapWidget;
 }
 
 void MapViewImpl::addListener(MapViewListener */*listener*/)
@@ -113,3 +116,4 @@ std::shared_ptr<Marker> MapViewImpl::createMarker(const std::string& iconURI,
 //{
 
 //}
+
