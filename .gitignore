@@ -1,0 +1,4 @@
+thirdparty
+mapview/bin
+mapview/platforms/qt/mapview.pro.user*
+mapview/platforms/build-mapview*
