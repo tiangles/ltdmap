@@ -1,5 +1,5 @@
 #include "projectionimpl.h"
-#include "tangram.h"
+#include "tangram/tangram.h"
 
 using namespace ltd_mapview;
 

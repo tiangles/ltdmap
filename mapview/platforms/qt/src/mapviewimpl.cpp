@@ -1,8 +1,8 @@
 #include "mapviewimpl.h"
 #include "camera.h"
 #include "mapwidget.h"
-#include "tangram.h"
-#include "markerimpl.h"
+#include "tangram/tangram.h"
+#include "markermpl.h"
 #include "projectionimpl.h"
 
 using namespace ltd_mapview;
@@ -14,7 +14,7 @@ MapView* MapView::createInstance(){
 MapViewImpl::MapViewImpl()
 {
     m_mapWidget = new Tangram::MapWidget(NULL);
-    m_mapWidget->initialize("scene.yaml");
+    m_mapWidget->initialize("/media/btian/workspace/workspace/tangram-es.tangram.build/build/linux/bin/scene.yaml");
     m_projection = new ProjectionImpl(m_mapWidget->getMap());
 }
 

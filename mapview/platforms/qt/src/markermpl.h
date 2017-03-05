@@ -1,6 +1,6 @@
 #pragma once
 #include "marker.h"
-#include "util/types.h"
+#include "tangram/util/types.h"
 namespace Tangram{
 class Map;
 }

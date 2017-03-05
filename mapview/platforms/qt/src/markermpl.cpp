@@ -1,5 +1,5 @@
-#include "markerimpl.h"
-#include "tangram.h"
+#include "markermpl.h"
+#include "tangram/tangram.h"
 #include "mapwidget.h"
 #include <QImage>
 #include <QBuffer>
